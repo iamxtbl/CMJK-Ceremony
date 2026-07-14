@@ -1,0 +1,221 @@
+/* ===========================
+   FLORES FAMILY CEREMONY
+   Opening Experience v1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    "Cormorant Garamond",
+    "Georgia",
+    serif;
+
+    background:#f6f2eb;
+
+    overflow:hidden;
+
+}
+
+/* Splash */
+
+#splash{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(246,242,235,.92),
+        rgba(246,242,235,.92)
+    ),
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2400&auto=format&fit=crop")
+    center center / cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.15),
+    rgba(0,0,0,.12));
+
+}
+
+.splash-content{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:5;
+
+    animation:fadeUp 1.8s ease;
+
+}
+
+.monogram{
+
+    font-size:120px;
+
+    font-weight:300;
+
+    color:#9c7b45;
+
+    letter-spacing:8px;
+
+    margin-bottom:20px;
+
+}
+
+.monogram span{
+
+    font-size:70px;
+
+    color:#c6a56d;
+
+}
+
+.ceremony-title{
+
+    letter-spacing:8px;
+
+    font-size:14px;
+
+    color:#6b6258;
+
+    margin-bottom:16px;
+
+}
+
+.date{
+
+    font-size:24px;
+
+    color:#3f3b37;
+
+    margin-bottom:55px;
+
+}
+
+#enterWebsite{
+
+    border:none;
+
+    background:#b9955b;
+
+    color:white;
+
+    padding:18px 48px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+
+#enterWebsite:hover{
+
+    background:#9c7b45;
+
+    transform:translateY(-3px);
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+.monogram{
+
+font-size:72px;
+
+letter-spacing:4px;
+
+}
+
+.monogram span{
+
+font-size:42px;
+
+}
+
+.date{
+
+font-size:18px;
+
+}
+
+#enterWebsite{
+
+width:240px;
+
+}
+
+}/* Enter Animation */
+
+body.entering{
+
+    animation:websiteEnter 1.2s ease forwards;
+
+}
+
+@keyframes websiteEnter{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+    }
+
+}
